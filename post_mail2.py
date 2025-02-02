@@ -8,8 +8,8 @@ import getpass
 
 while True:
 
-    gonderici_email = "igrs@itu.edu.tr"
-    gonderici_sifre = "WLCAgjEi6F"
+    gonderici_email = "..."
+    gonderici_sifre = "..."
 
     devam = input("Emin misiniz? (Evet/Hayır): ").lower().strip()
     if devam == "evet":
@@ -19,8 +19,8 @@ while True:
 
 print("E-posta ve şifre kontrol ediliyor...")
 
-mail_sunucu = "outgoing.itu.edu.tr"
-mail_port = 587
+mail_sunucu = "...."
+mail_port = ...
 kullanici_adi = gonderici_email.split("@")[0]
 df = pd.read_excel('epostalar.xlsx')
 
@@ -32,7 +32,7 @@ def mail_gonder(df):
 
         column_names = df.columns.tolist()
         param_vars = {col_name: df[col_name] for col_name in column_names if isinstance(col_name, str) and col_name.startswith("Param_")}
-        cc = ["igrs@itu.edu.tr", "oztopal@itu.edu.tr"]
+        cc = ["...."]
 
         cckontrol = input("CC gönderilsin mi? (Evet/Hayır): ").lower().strip()
         if cckontrol == "evet":
